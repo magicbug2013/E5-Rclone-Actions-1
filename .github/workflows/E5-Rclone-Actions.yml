@@ -24,7 +24,7 @@ jobs:
           # 写配置文件
           mkdir -p ~/.config/rclone/
           cat << EOF > ~/.config/rclone/rclone.conf
-          $RCLONE_CONFIG
+          ${{ secrets.RCLONE_CONFIG }}
           EOF
       - name: Rclone-Run
         run: |
